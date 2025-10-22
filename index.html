@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marjorie Jules, Esq. | New York Attorney</title>
-  <meta name="description" content="Marjorie Jules, Esq. — New York attorney with 35+ years of experience. Immigration, appeals, and family matters. Serving New York City and statewide." />
+  <title>Jules Firm, LLC | New York Law Firm</title>
+  <meta name="description" content="Jules Firm, LLC — New York law firm led by Marjorie Jules, Esq., with 30+ years of experience in tort and insurance defense. Serving New York City and statewide." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0f172a;          /* slate-900 */
@@ -21,22 +24,29 @@
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; 
-      background:linear-gradient(180deg, var(--bg), #030712 60%); color:var(--text);
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      background:linear-gradient(180deg, var(--bg), #030712 60%);
+      color:var(--text);
     }
     a{color:var(--accent); text-decoration:none}
     a:hover{color:var(--accent-2)}
+
     header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(6px);
-      background:rgba(3,7,18,.6); border-bottom:1px solid rgba(148,163,184,.15)
+      position:sticky; top:0; z-index:50;
+      backdrop-filter:saturate(140%) blur(6px);
+      background:rgba(3,7,18,.6);
+      border-bottom:1px solid rgba(148,163,184,.15)
     }
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; gap:12px; align-items:center}
-    .logo{width:42px; height:42px; border-radius:12px; background:radial-gradient(100% 100% at 30% 20%, var(--accent), var(--accent-2)); box-shadow:0 10px 30px var(--ring)}
     .brand h1{font-size:1.05rem; margin:0; letter-spacing:.4px}
     .cta{display:flex; gap:10px; align-items:center}
-    .btn{appearance:none; border:1px solid rgba(148,163,184,.25); background:#0b1220; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600}
+    .btn{
+      appearance:none; border:1px solid rgba(148,163,184,.25); background:#0b1220; color:var(--text);
+      padding:10px 14px; border-radius:12px; font-weight:600
+    }
     .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#00111a; border:none}
     .btn:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
 
@@ -78,22 +88,26 @@
       .hero{padding-top:46px}
     }
   </style>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LegalService",
-    "name": "Marjorie Jules, Esq.",
+    "name": "Jules Firm, LLC",
+    "founder": "Marjorie Jules",
     "areaServed": "New York State",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "700 Columbus Avenue, Front #20181",
       "addressLocality": "New York",
       "addressRegion": "NY",
+      "postalCode": "10025",
       "addressCountry": "US"
     },
     "telephone": "+1-718-809-5959",
-    "founder": "Marjorie Jules",
-    "url": "https://example.com/"
+    "email": "mailto:mjulesesq@aol.com",
+    "url": "https://apjules.github.io/Marjorie-Jules-Website/"
   }
   </script>
 </head>
@@ -101,12 +115,12 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <h1>Marjorie Jules, Esq.</h1>
+        <!-- If you later add a logo.png to the root, replace the text with: <img src="logo.png" alt="Jules Firm logo" style="width:48px;height:48px;border-radius:12px;object-fit:contain;background:#0b1220;padding:6px;box-shadow:0 8px 28px var(--ring)" /> -->
+        <h1>Jules Firm, LLC</h1>
       </div>
       <div class="cta">
         <a class="btn" href="#contact">Contact</a>
-        <a class="btn primary" href="tel:+17188095959">Call (718) 809‑5959</a>
+        <a class="btn primary" href="tel:+17188095959">Call (718) 809-5959</a>
       </div>
     </div>
   </header>
@@ -117,11 +131,11 @@
       <div class="hero-grid">
         <div class="card"><div class="inner">
           <span class="pill" style="display:inline-block">Serving New York City & Statewide</span>
-          <h2>Experienced, practical counsel for immigration, appeals, and family matters.</h2>
-          <p>Marjorie Jules has advised and represented clients across New York for more than three decades. She focuses on clear guidance, careful preparation, and steady advocacy—whether you are navigating U.S. immigration, challenging a decision on appeal, or addressing sensitive family issues.</p>
+          <h2>Experienced, practical counsel for tort and insurance defense matters.</h2>
+          <p>Jules Firm, LLC provides clear guidance and steady advocacy for complex litigation, including products liability, labor law, premises liability, and motor vehicle matters.</p>
           <div class="meta">
             <div class="pill">Admitted in New York (since 1989)</div>
-            <div class="pill">Bar ID: 2240786</div>
+            <div class="pill">Lead counsel experience in trials & appeals</div>
             <div class="pill">English — spoken & written</div>
             <div class="pill">Based in New York City</div>
           </div>
@@ -133,18 +147,11 @@
         <div class="card"><div class="inner">
           <h3 style="margin-top:2px">At a glance</h3>
           <ul class="muted" style="line-height:1.75">
-            <li>35+ years of legal experience in New York.</li>
-            <li>Matters handled with discretion and a client‑first approach.</li>
-            <li>Available for select government contracting needs (see below).</li>
-            <li>Initial consultations by phone or secure video.</li>
+            <li>30+ years of New York litigation experience.</li>
+            <li>Hands-on representation by Marjorie Jules, Esq.</li>
+            <li>Available for select government contracting needs.</li>
+            <li>Consultations by phone or secure video.</li>
           </ul>
-          <div class="tile" style="margin-top:14px">
-            <strong>Profiles:</strong>
-            <div style="margin-top:8px; display:flex; gap:12px; flex-wrap:wrap">
-              <a href="https://www.justia.com/lawyers/new-york/marjorie-jules" target="_blank" rel="noopener">Justia</a>
-              <a href="https://www.avvo.com/attorneys/marjorie-jules" target="_blank" rel="noopener">Avvo</a>
-            </div>
-          </div>
         </div></div>
       </div>
     </section>
@@ -154,24 +161,30 @@
       <h3>Practice Focus</h3>
       <div class="grid">
         <div class="tile">
-          <h4>Immigration</h4>
-          <p class="muted">Family‑based petitions, status adjustments, naturalization, waivers, and humanitarian matters. Careful filings and preparation for interviews.</p>
+          <h4>Tort & Insurance Defense</h4>
+          <p class="muted">Vehicular and premises liability, complex tort claims, defense strategy and trial preparation.</p>
         </div>
         <div class="tile">
-          <h4>Appeals</h4>
-          <p class="muted">Evaluations and briefing in administrative and civil appeals, with a focus on persuasive writing and issue framing.</p>
+          <h4>Products Liability & Labor Law</h4>
+          <p class="muted">Section 240/241 Labor Law matters and products liability defense in complex settings.</p>
         </div>
         <div class="tile">
-          <h4>Family & Matrimonial</h4>
-          <p class="muted">Prenuptial agreements and select family matters requiring measured, respectful representation.</p>
+          <h4>Appeals & Motion Practice</h4>
+          <p class="muted">Persuasive briefing and oral argument in administrative and civil appeals.</p>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
-      <h3>About Marjorie</h3>
-      <div class="resume">
+      <h3>About the Firm</h3>
+      <div class="tile">
+        <p class="muted" style="margin:0">
+          Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, is a New York–based practice with over three decades of litigation experience. Ms. Jules began her career at Manhattan defense firms <em>Leahey &amp; Johnson</em> and <em>Lester Schwab Katz &amp; Dwyer</em>, then served as in-house counsel for major insurers including <em>Travelers</em>, <em>GEICO</em>, and <em>Nationwide</em>. She has acted as first chair at trial, conducted depositions, and handled briefing and argument in courts across all five boroughs as well as Westchester, Nassau, Suffolk, and Federal Courts. The firm’s approach is defined by professionalism, integrity, and diligent, results-oriented advocacy.
+        </p>
+      </div>
+
+      <div class="resume" style="margin-top:14px">
         <div class="item">
           <strong>Admission</strong>
           <div class="muted">New York State (1989 to present)</div>
@@ -181,15 +194,14 @@
           <div class="muted">Albany Law School (J.D.)</div>
         </div>
         <div class="item">
-          <strong>Languages</strong>
-          <div class="muted">English (spoken & written)</div>
+          <strong>Capacity</strong>
+          <div class="muted">Solo practice with scalable support as caseload grows</div>
         </div>
         <div class="item">
           <strong>Location</strong>
           <div class="muted">New York City, NY</div>
         </div>
       </div>
-      <p class="muted" style="margin-top:12px">Marjorie’s practice emphasizes accessibility and diligence. Clients work directly with an attorney who listens, explains options plainly, and tailors a path forward to each case.</p>
     </section>
 
     <!-- GOVERNMENT CONTRACTING -->
@@ -200,21 +212,21 @@
           <h4>Core Competencies</h4>
           <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8">
             <li>Document review, legal research, and memoranda</li>
-            <li>Administrative law & immigration adjudications</li>
-            <li>Brief writing and appellate support</li>
+            <li>Administrative & tort adjudications; litigation support</li>
+            <li>Brief writing, motion practice, and appellate advocacy</li>
             <li>Policy interpretation & compliance guidance</li>
           </ul>
         </div>
         <div class="tile">
           <h4>Past Performance / Experience</h4>
-          <p class="muted">35+ years of New York legal experience across private practice and client advisory. Available upon request: representative matters and writing samples with confidential information removed.</p>
+          <p class="muted">30+ years of New York litigation experience across private practice and insurer in-house defense. Representative matters and writing samples available on request.</p>
         </div>
         <div class="tile">
           <h4>Readiness</h4>
           <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8">
-            <li>SAM.gov: <em>registration pending / available upon request</em></li>
-            <li>Insurance: professional liability maintained</li>
-            <li>Small business; NYC‑based; remote‑capable</li>
+            <li>SAM.gov: registration available upon request</li>
+            <li>Professional liability insurance maintained</li>
+            <li>Small business; NYC-based; remote-capable</li>
           </ul>
         </div>
       </div>
@@ -226,10 +238,13 @@
       <div class="contact-wrap">
         <div class="card"><div class="inner">
           <p class="muted">For consultations or engagements, call or send a message. Virtual meetings are available for clients throughout New York State.</p>
-          <p style="margin:.6rem 0"><strong>Phone:</strong> <a href="tel:+17188095959">(718) 809‑5959</a></p>
-          <p class="muted">Office: New York City, NY • Serving clients statewide</p>
-          <p class="muted" style="font-size:.9rem; margin-top:18px"><strong>Note:</strong> Do not send confidential details through this form. Submitting a message does not create an attorney‑client relationship.</p>
+          <p><strong>Office:</strong> 700 Columbus Avenue, Front #20181, New York, NY 10025</p>
+          <p><strong>Phone:</strong> <a href="tel:+17188095959">(718) 809-5959</a></p>
+          <p><strong>Email:</strong> <a href="mailto:mjulesesq@aol.com">mjulesesq@aol.com</a></p>
+          <p class="muted" style="font-size:.9rem; margin-top:18px"><strong>Note:</strong> Do not send confidential details through this form. Submitting a message does not create an attorney-client relationship.</p>
         </div></div>
+
+        <!-- Simple static form; connect to Formspree or similar by replacing action -->
         <form class="card" method="post" action="#">
           <div class="inner">
             <div class="row">
@@ -249,7 +264,7 @@
               </div>
               <div>
                 <label for="topic">Matter type</label>
-                <input id="topic" name="topic" placeholder="Immigration / Appeal / Family" />
+                <input id="topic" name="topic" placeholder="Tort / Insurance / Appeal" />
               </div>
             </div>
             <div style="margin-top:12px">
@@ -260,7 +275,9 @@
               <button class="btn primary" type="submit">Send message</button>
               <a class="btn" href="tel:+17188095959">Call instead</a>
             </div>
-            <p class="muted" style="margin-top:10px; font-size:.88rem">Form endpoint not yet connected — update the <code>action</code> to your email/service (e.g., Formspree) before publishing.</p>
+            <p class="muted" style="margin-top:10px; font-size:.88rem">
+              Form endpoint not yet connected — set the <code>action</code> to your email service (e.g., Formspree) before publishing.
+            </p>
           </div>
         </form>
       </div>
@@ -268,15 +285,17 @@
 
     <section>
       <div class="tile">
-        <p class="muted" style="margin:0; font-size:.9rem">Attorney Advertising. Prior results do not guarantee a similar outcome. This site provides general information and does not create an attorney‑client relationship.</p>
+        <p class="muted" style="margin:0; font-size:.9rem">
+          Attorney Advertising. Prior results do not guarantee a similar outcome. This site provides general information and does not create an attorney-client relationship.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
-      <div>© <span id="yr"></span> Marjorie Jules, Esq.</div>
-      <div>New York City, NY · <a href="tel:+17188095959">(718) 809‑5959</a></div>
+      <div>© <span id="yr"></span> Jules Firm, LLC</div>
+      <div>New York City, NY · <a href="tel:+17188095959">(718) 809-5959</a></div>
     </div>
   </footer>
 
