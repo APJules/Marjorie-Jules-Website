@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jules Firm, LLC | New York City Law Firm</title>
-  <meta name="description" content="Jules Firm, LLC — New York City law firm led by Marjorie Jules, Esq., focused on tort and insurance defense, products liability, labor law, premises liability, appeals, and complex litigation." />
+  <meta name="description" content="Jules Firm, LLC — New York City litigation practice led by Marjorie Jules, Esq., focused on tort and insurance defense, products liability, labor law, premises liability, appeals, and complex matters." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +12,24 @@
 
   <style>
     :root{
-      --bg:#0f172a; --muted:#94a3b8; --text:#e5e7eb;
-      --accent:#38bdf8; --accent-2:#22d3ee; --ring:rgba(56,189,248,.35);
+      /* sky blue palette */
+      --bg:#0b1220;              /* deep slate/navy */
+      --muted:#9fb3c8;           /* soft blue-gray text */
+      --text:#eef4ff;            /* near white */
+      --accent:#38bdf8;          /* sky-400 */
+      --accent-2:#22d3ee;        /* cyan-400 */
+      --ring:rgba(56,189,248,.35);
+      --panel:rgba(15,23,42,.78);
+      --border:rgba(148,163,184,.18);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-      background:linear-gradient(180deg, var(--bg), #030712 60%); color:var(--text);
+      background:radial-gradient(1200px 700px at 20% -10%, rgba(56,189,248,.18), transparent 60%),
+                 radial-gradient(900px 600px at 100% 0%, rgba(34,211,238,.13), transparent 55%),
+                 linear-gradient(180deg, #0f172a, var(--bg) 60%);
+      color:var(--text);
     }
     a{color:var(--accent); text-decoration:none}
     a:hover{color:var(--accent-2)}
@@ -27,13 +37,13 @@
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter:saturate(140%) blur(6px);
-      background:rgba(3,7,18,.6); border-bottom:1px solid rgba(148,163,184,.15)
+      background:rgba(2,8,23,.6); border-bottom:1px solid rgba(148,163,184,.15)
     }
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; gap:12px; align-items:center}
     .brand h1{font-size:1.05rem; margin:0; letter-spacing:.4px}
-    .btn{appearance:none; border:1px solid rgba(148,163,184,.25); background:#0b1220; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600}
+    .btn{appearance:none; border:1px solid var(--border); background:#081021; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600}
     .btn:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
 
     /* Hero */
@@ -41,39 +51,39 @@
     .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:28px}
     .hero h2{font-size:2.2rem; line-height:1.15; margin:.2rem 0 1rem}
     .hero p{color:var(--muted); font-size:1.03rem}
-    .card{background:linear-gradient(180deg, rgba(17,24,39,.7), rgba(2,6,23,.7)); border:1px solid rgba(148,163,184,.18); border-radius:18px; box-shadow:0 10px 40px rgba(2,132,199,.08)}
+    .card{background:linear-gradient(180deg, var(--panel), rgba(2,6,23,.82)); border:1px solid var(--border); border-radius:18px; box-shadow:0 10px 40px rgba(2,132,199,.10)}
     .card .inner{padding:22px}
 
     .meta{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px}
-    .pill{border:1px solid rgba(148,163,184,.25); padding:10px 12px; border-radius:12px; font-size:.92rem; color:#cbd5e1}
+    .pill{border:1px solid var(--border); padding:10px 12px; border-radius:12px; font-size:.92rem; color:#dbe7f6}
 
     /* Sections */
     section{padding:54px 0}
     section h3{font-size:1.35rem; margin:0 0 14px}
     .grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px}
-    .tile{padding:18px; border-radius:16px; background:linear-gradient(180deg, rgba(15,23,42,.75), rgba(2,6,23,.75)); border:1px solid rgba(148,163,184,.16)}
+    .tile{padding:18px; border-radius:16px; background:linear-gradient(180deg, var(--panel), rgba(2,6,23,.86)); border:1px solid var(--border)}
     .tile h4{margin:0 0 6px}
     .muted{color:var(--muted)}
 
-    /* Resume strip */
+    /* Info strip */
     .resume{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .resume .item{padding:16px; border-radius:14px; border:1px dashed rgba(148,163,184,.25)}
+    .resume .item{padding:16px; border-radius:14px; border:1px dashed var(--border)}
 
     /* Contact */
     .contact-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:22px}
-    label{display:block; font-size:.92rem; margin-bottom:6px; color:#cbd5e1}
-    input, textarea{width:100%; background:#0b1220; border:1px solid rgba(148,163,184,.25); color:var(--text); padding:12px 14px; border-radius:12px}
+    label{display:block; font-size:.92rem; margin-bottom:6px; color:#d1e5f7}
+    input, textarea{width:100%; background:#081021; border:1px solid var(--border); color:var(--text); padding:12px 14px; border-radius:12px}
     textarea{min-height:140px}
     form .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
     .office-address{
-      font-size:1.05rem;
+      font-size:1.15rem;
       line-height:1.9;
-      font-weight:600;
-      background:rgba(148,163,184,.08);
-      padding:14px 16px; border-radius:12px; border:1px solid rgba(148,163,184,.22)
+      font-weight:700;
+      background:rgba(56,189,248,.10);
+      padding:16px 18px; border-radius:12px; border:1px solid rgba(56,189,248,.35)
     }
 
-    footer{padding:28px 0; color:#9aa8bd; border-top:1px solid rgba(148,163,184,.15)}
+    footer{padding:28px 0; color:#b9cbe0; border-top:1px solid rgba(148,163,184,.15)}
 
     @media (max-width: 920px){
       .hero-grid,.grid,.resume,.contact-wrap,form .row{grid-template-columns:1fr}
@@ -81,7 +91,7 @@
     }
   </style>
 
-  <!-- Structured Data (no phone/email per request) -->
+  <!-- Structured Data (no phone/email) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,7 +107,7 @@
       "postalCode": "10025",
       "addressCountry": "US"
     },
-    "url": "https://apjules.github.io/Marjorie-Jules-Website/"
+    "url": "https://julesfirm.com"
   }
   </script>
 </head>
@@ -134,8 +144,8 @@
         <div class="card"><div class="inner">
           <h3 style="margin-top:2px">At a glance</h3>
           <ul class="muted" style="line-height:1.75">
-            <li>Seasoned litigation practice in New York City courts.</li>
-            <li>Hands-on representation by Marjorie Jules, Esq.</li>
+            <li><em>hands-on representation by experienced attorneys</em></li>
+            <li>Seasoned New York City litigation practice.</li>
             <li>Available for select government contracting needs.</li>
             <li>Consultations by secure video or in person.</li>
           </ul>
@@ -167,10 +177,10 @@
       <h3>About the Firm</h3>
       <div class="tile">
         <p class="muted" style="margin:0">
-          Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, is a New York City–based practice focused on litigation. Ms. Jules has worked at reputable Manhattan defense firms and served as in-house counsel for major insurance companies, bringing a well-rounded perspective to complex cases.
+          Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, is a New York City–based practice with over 30 years of experience in defending cases involving <em>slip and fall accidents, general liability, products liability, insurance matters, premises liability, automobile accidents, construction accidents, and municipal claims</em>. Ms. Jules has worked at reputable Manhattan defense firms and served as in-house counsel for major insurance companies, bringing a well-rounded perspective to complex litigation.
         </p>
         <p class="muted" style="margin:12px 0 0 0">
-          <strong>Firm approach:</strong> professionalism, integrity, and diligent, results-oriented advocacy with clear communication and direct attorney access throughout each matter.
+          <strong>Firm approach:</strong> professionalism, integrity, and <em>diligence</em> — result-oriented advocacy with clear communication and direct attorney access from start to finish.
         </p>
       </div>
 
@@ -181,7 +191,7 @@
         </div>
         <div class="item">
           <strong>Capacity</strong>
-          <div class="muted">Solo practice with scalable support as caseload grows</div>
+          <div class="muted">Dedicated team with scalable support</div>
         </div>
         <div class="item">
           <strong>Location</strong>
@@ -194,29 +204,42 @@
       </div>
     </section>
 
-    <!-- GOVERNMENT CONTRACTING -->
+    <!-- GOVERNMENT / CAPABILITIES -->
     <section id="gov">
-      <h3>Government Contracting Capability</h3>
+      <h3>Capabilities</h3>
       <div class="grid">
         <div class="tile">
           <h4>Core Competencies</h4>
           <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8">
-            <li>Document review, legal research, and memoranda</li>
-            <li>Administrative & tort adjudications; litigation support</li>
-            <li>Brief writing, motion practice, and appellate advocacy</li>
-            <li>Policy interpretation & compliance guidance</li>
+            <li>Personal attention to every matter by a committed team of professionals</li>
+            <li>Focused, assertive advocacy paired with open, clear communication</li>
+            <li>Strategic guidance aimed at the best achievable outcomes</li>
+            <li>Support, attentiveness, and consideration throughout the case</li>
+            <li>Thoughtful evaluation of concerns and obstacles to move matters forward</li>
+            <li>Assertive protection of client rights at each stage of litigation</li>
+            <li>Your interests and aims remain the guiding priority</li>
           </ul>
         </div>
+
         <div class="tile">
-          <h4>Past Performance / Experience</h4>
-          <p class="muted">Extensive New York City litigation experience across private defense practice and insurer in-house roles.</p>
+          <h4>Why Choose Us</h4>
+          <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8">
+            <li>More than three decades of litigation experience</li>
+            <li>Personalized, results-driven service</li>
+            <li>Experience across trials, tort adjudications, and appellate advocacy</li>
+            <li>Document review, legal research, brief-writing, motion practice</li>
+            <li>Policy interpretation and compliance guidance</li>
+            <li>Reliable counsel with clear communication</li>
+            <li>Streamlined operations that keep hourly rates reasonable</li>
+          </ul>
         </div>
+
         <div class="tile">
           <h4>Readiness</h4>
           <ul class="muted" style="margin:0; padding-left:18px; line-height:1.8">
-            <li>SAM.gov: registration available upon request</li>
-            <li>Professional liability insurance maintained</li>
-            <li>Small business; NYC-based; remote-capable</li>
+            <li>Committed support staff serving all five NYC boroughs, plus Nassau, Suffolk, and Westchester Counties</li>
+            <li>Dedicated team of paralegals and legal assistants</li>
+            <li>Free consultation — meet in person, by phone, or via Zoom</li>
           </ul>
         </div>
       </div>
@@ -227,7 +250,7 @@
       <h3>Contact</h3>
       <div class="contact-wrap">
         <div class="card"><div class="inner">
-          <p class="muted">For consultations or engagements, please send a message. Virtual meetings are available.</p>
+          <p class="muted">For consultations or engagements, please send a message below.</p>
           <div class="office-address">
             Jules Firm, LLC<br/>
             700 Columbus Avenue<br/>
