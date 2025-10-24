@@ -253,38 +253,52 @@
           <p class="muted">For consultations or engagements, please send a message below.</p>
           <div class="office-address">
             Jules Firm, LLC<br/>
-            700 Columbus Avenue<br/>
-            Front #20181<br/>
+            700 Columbus Avenue, Front<br/>
+            #20181<br/>
             New York, NY 10025
           </div>
           <p class="muted" style="font-size:.9rem; margin-top:18px"><strong>Note:</strong> Do not send confidential details through this form. Submitting a message does not create an attorney-client relationship.</p>
         </div></div>
 
-        <!-- Simple static form; connect to Formspree or similar by replacing action -->
-        <form class="card" method="post" action="#">
-          <div class="inner">
-            <div class="row">
-              <div>
-                <label for="name">Full name</label>
-                <input id="name" name="name" autocomplete="name" required />
-              </div>
-              <div>
-                <label for="email">Your email</label>
-                <input id="email" type="email" name="email" autocomplete="email" required />
-              </div>
-            </div>
-            <div style="margin-top:12px">
-              <label for="message">How can we help?</label>
-              <textarea id="message" name="message" required></textarea>
-            </div>
-            <div style="margin-top:14px; display:flex; gap:10px">
-              <button class="btn" type="submit">Send message</button>
-            </div>
-            <p class="muted" style="margin-top:10px; font-size:.88rem">
-              Form endpoint not yet connected — set the <code>action</code> to your email service (e.g., Formspree) before publishing.
-            </p>
-          </div>
-        </form>
+<!-- Contact form (Formspree) -->
+<form class="card" method="POST" action="https://formspree.io/f/mrbynwre">
+  <div class="inner">
+    <div class="row">
+      <div>
+        <label for="name">Full name</label>
+        <input id="name" name="name" autocomplete="name" required />
+      </div>
+      <div>
+        <label for="email">Your email</label>
+        <input id="email" type="email" name="email" autocomplete="email" required />
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <label for="message">How can we help?</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+
+    <!-- Optional: set subject line and thank-you redirect -->
+    <input type="hidden" name="_subject" value="New inquiry from julesfirm.com" />
+    <input type="hidden" name="_next" value="https://julesfirm.com/#thanks" />
+
+    <!-- Optional: simple spam honeypot (leave blank) -->
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+    <div style="margin-top:14px; display:flex; gap:10px">
+      <button class="btn" type="submit">Send message</button>
+    </div>
+
+    <p class="muted" style="margin-top:10px; font-size:.88rem">
+      We will reply to your message as soon as possible.
+    </p>
+  </div>
+</form>
+        <!-- Thank-you message -->
+<div id="thanks" class="tile" style="margin-top:16px; display:none;">
+  <p class="muted" style="margin:0">Thank you — your message has been sent.</p>
+</div>
       </div>
     </section>
 
