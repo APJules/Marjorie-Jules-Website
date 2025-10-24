@@ -11,6 +11,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* --- Restore dark theme text colors --- */
+body, h1, h2, h3, h4, h5, h6, p, li, label {
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted) !important;
+}
+
+.card, .tile {
+  background: linear-gradient(180deg, var(--panel), rgba(2,6,23,.82));
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn {
+  color: var(--text);
+}
+
+a, a:visited {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-2);
+}
     :root{
       /* sky blue palette */
       --bg:#0b1220;              /* deep slate/navy */
