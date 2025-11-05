@@ -3,106 +3,72 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jules Firm, LLC | New York City Law Firm</title>
-  <meta name="description" content="Jules Firm, LLC — New York City defense litigation led by Marjorie Jules, Esq., focused on tort and insurance defense, products liability, premises liability, labor law, appeals, and complex matters." />
+  <title>Jules Firm, LLC | New York City Defense Counsel</title>
+  <meta name="description" content="Jules Firm, LLC provides strategic, results-driven defense counsel in New York City. Tort and insurance defense, premises, products, labor law, appeals." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Dark theme palette */
     :root{
-      --bg:#0b1220;              /* solid deep navy */
-      --muted:#9fb3c8;           /* soft blue-gray text */
-      --text:#eef4ff;            /* near white */
-      --accent:#38bdf8;          /* sky-400 */
-      --accent-2:#22d3ee;        /* cyan-400 */
-      --ring:rgba(56,189,248,.35);
-      --panel:rgba(15,23,42,.78);
+      --bg:#0b1220;            /* solid dark navy */
+      --panel:rgba(15,23,42,.86);
+      --text:#eef4ff;          /* near white */
+      --muted:#9fb3c8;         /* soft blue-gray */
+      --accent:#38bdf8;        /* cyan sky */
+      --accent-2:#22d3ee;
       --border:rgba(148,163,184,.18);
+      --ring:rgba(56,189,248,.35);
     }
-
-    /* Global text colors (restore if anything turned black) */
-    body, h1, h2, h3, h4, h5, h6, p, li, label { color: var(--text); }
-    .muted { color: var(--muted) !important; }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-      background: var(--bg); /* SOLID background (no gradient) */
+      background:var(--bg); color:var(--text);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
-
-    a, a:visited { color:var(--accent); text-decoration:none }
-    a:hover { color:var(--accent-2) }
-
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter:saturate(140%) blur(6px);
-      background:rgba(2,8,23,.6);
-      border-bottom:1px solid rgba(148,163,184,.15)
-    }
+    a,a:visited{color:var(--accent); text-decoration:none}
+    a:hover{color:var(--accent-2)}
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{position:sticky; top:0; z-index:40; background:rgba(7,12,24,.9); border-bottom:1px solid var(--border); backdrop-filter:saturate(140%) blur(6px)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{display:flex; gap:12px; align-items:center}
-    .brand h1{font-size:1.05rem; margin:0; letter-spacing:.4px}
-
-    .btn{
-      appearance:none; border:1px solid var(--border); background:#081021; color:var(--text);
-      padding:10px 14px; border-radius:12px; font-weight:600
-    }
+    .brand{font-weight:700; letter-spacing:.3px}
+    .btn{border:1px solid var(--border); background:#081021; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600}
     .btn:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
 
-    /* Cards / tiles */
-    .card, .tile {
-      background: linear-gradient(180deg, var(--panel), rgba(2,6,23,.82));
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius:16px;
-    }
-    .card .inner{padding:22px}
-    .tile{padding:18px}
+    main.container{padding:28px 20px}
+    section{padding:44px 0}
+    h1,h2,h3,h4{margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .card{background:linear-gradient(180deg,var(--panel),rgba(2,6,23,.9)); border:1px solid var(--border); border-radius:16px; padding:20px}
+    .grid-3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+    .grid-2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
+    .pill{display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:#dbe7f6; font-size:.95rem}
+    ul.clean{margin:10px 0 0 18px; line-height:1.75}
+    .tile{border:1px solid var(--border); border-radius:14px; padding:16px; background:linear-gradient(180deg,rgba(10,16,30,.9),rgba(6,10,20,.9))}
 
-    /* Hero */
-    .hero{padding:72px 0 36px}
-    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:28px}
-    .hero h2{font-size:2.2rem; line-height:1.15; margin:.2rem 0 1rem}
-    .hero p{color:var(--muted); font-size:1.03rem}
+    /* Contact form */
+    .contact-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
+    label{display:block; font-size:.92rem; color:#d1e5f7; margin:6px 0}
+    input,textarea{width:100%; background:#081021; border:1px solid var(--border); color:var(--text); padding:12px 14px; border-radius:12px}
+    textarea{min-height:130px; resize:vertical}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
 
-    /* Sections */
-    section{padding:54px 0}
-    section h3{font-size:1.35rem; margin:0 0 14px}
+    .office{font-size:1.1rem; line-height:1.8; font-weight:700; background:rgba(56,189,248,.10);
+      padding:16px 18px; border-radius:12px; border:1px solid rgba(56,189,248,.35)}
 
-    /* Info strip */
-    .resume{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .resume .item{padding:16px; border-radius:14px; border:1px dashed var(--border)}
+    /* Read more discloser */
+    details summary{cursor:pointer; list-style:none}
+    details summary::-webkit-details-marker{display:none}
+    summary .chev{transition:transform .15s ease}
+    details[open] summary .chev{transform:rotate(90deg)}
 
-    /* Contact */
-    .contact-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:22px}
-    label{display:block; font-size:.92rem; margin-bottom:6px; color:#d1e5f7}
-    input, textarea{width:100%; background:#081021; border:1px solid var(--border); color:var(--text); padding:12px 14px; border-radius:12px}
-    textarea{min-height:140px}
-    form .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    footer{padding:26px 0; color:#b9cbe0; border-top:1px solid var(--border)}
 
-    .pill{
-      border:1px solid var(--border); padding:10px 12px; border-radius:12px;
-      font-size:.92rem; color:#dbe7f6
-    }
-    .meta{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px}
-
-    .office-address{
-      font-size:1.15rem; line-height:1.9; font-weight:700;
-      background:rgba(56,189,248,.10);
-      padding:16px 18px; border-radius:12px; border:1px solid rgba(56,189,248,.35)
-    }
-
-    footer{padding:28px 0; color:#b9cbe0; border-top:1px solid rgba(148,163,184,.15)}
-
-    @media (max-width: 920px){
-      .hero-grid,.resume,.contact-wrap,form .row{grid-template-columns:1fr}
-      .hero{padding-top:46px}
+    @media (max-width:920px){
+      .grid-3,.grid-2,.contact-wrap,.row{grid-template-columns:1fr}
     }
   </style>
 
@@ -129,196 +95,156 @@
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">
-        <h1>Jules Firm, LLC</h1>
-      </div>
-      <div class="cta">
-        <a class="btn" href="#contact">Contact</a>
-      </div>
+      <div class="brand">Jules Firm, LLC</div>
+      <a class="btn" href="#contact">Contact</a>
     </div>
   </header>
 
   <main class="container">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-grid">
-        <div class="card"><div class="inner">
-          <span class="pill" style="display:inline-block">Serving New York City</span>
-          <h2>Experienced, practical counsel for tort and insurance defense matters.</h2>
-          <p>Jules Firm, LLC provides clear guidance and steady advocacy for complex litigation, including products liability, labor law, premises liability, and motor vehicle matters.</p>
 
-          <!-- NEW firm description inserted directly after the first paragraph -->
-          <p>
-            At The Jules Firm, LLC, we are dedicated to providing premier defense representation across New York City.
-            Our fundamental commitment lies in offering each client not just legal counsel, but a personalized and robust defense strategy
-            designed to meticulously protect their legal rights and secure their best interests. We firmly believe in a client-centric approach,
-            ensuring that every individual receives the highest caliber of attention and tailored solutions, regardless of the complexity of their situation.
-          </p>
-          <p>
-            Our seasoned team approaches every case with unwavering dedication, diligently exploring every facet and legal avenue to achieve
-            the most favorable resolution possible. We are relentless in our advocacy, leaving no stone unturned as we champion our clients’ cause throughout the legal process.
-          </p>
-          <p>
-            Our firm’s varied experience equips us with a profound understanding of litigation tactics and strategies, allowing us to anticipate challenges and construct
-            highly effective defense arguments tailored to prevailing legal precedents.
-          </p>
-          <p>
-            Accessibility and immediate support are cornerstones of our practice. Recognizing that urgent legal needs can arise at any time, our team is ready to provide
-            timely and decisive legal defense and representation.
-          </p>
-          <p>
-            When your lawsuit deserves an astute, strategic, and tenacious defense, reach out to discuss your legal needs and discover how our expertise can make
-            a critical difference in your case. For immediate assistance, please contact us.
-          </p>
-
-          <div class="meta">
-            <div class="pill">New York State and Federal Bar</div>
-            <div class="pill">Lead counsel in trials & appeals</div>
-            <div class="pill">Track record of success in defending complex, serious tort matters</div>
-            <div class="pill">Based in New York City</div>
-          </div>
-
-          <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn" href="#contact">Request a consultation</a>
-          </div>
-        </div></div>
-
-        <div class="card"><div class="inner">
-          <h3 style="margin-top:2px">At a glance</h3>
-          <ul class="muted" style="line-height:1.75">
-            <li><em>Hands-on representation by experienced attorneys</em></li>
-            <li>Seasoned New York City litigation practice.</li>
-            <li>Available for select government contracting needs.</li>
-            <li>Consultations by secure video or in person.</li>
-          </ul>
-        </div></div>
+    <!-- HERO: crisp + short -->
+    <section style="padding-top:36px">
+      <div class="card">
+        <span class="pill">Defense Litigation • New York City</span>
+        <h1 style="font-size:2rem; margin-top:10px">Defense Counsel for Complex Litigation</h1>
+        <p class="muted" style="margin-top:6px">
+          Strategic, results-driven representation in tort and insurance defense, including premises, products, labor law, and appeals.
+        </p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <span class="pill">New York State and Federal Bar</span>
+          <span class="pill">30+ years’ experience</span>
+          <span class="pill">Based in New York City</span>
+        </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <h3>About the Firm</h3>
-      <div class="tile">
+    <!-- PRACTICE AREAS: up front, scannable -->
+    <section>
+      <h2 style="font-size:1.35rem; margin-bottom:12px">Practice Areas</h2>
+      <div class="grid-3">
+        <div class="tile">
+          <h3 style="font-size:1.1rem">Tort & Insurance Defense</h3>
+          <p class="muted">Vehicular and premises liability, complex tort claims, defense strategy and trial prep.</p>
+        </div>
+        <div class="tile">
+          <h3 style="font-size:1.1rem">Products & Labor Law</h3>
+          <p class="muted">Labor Law §240/241 and products liability defense in complex settings.</p>
+        </div>
+        <div class="tile">
+          <h3 style="font-size:1.1rem">Appeals & Motion Practice</h3>
+          <p class="muted">Persuasive briefing and oral argument in administrative and civil appeals.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT: concise + expandable philosophy -->
+    <section>
+      <h2 style="font-size:1.35rem; margin-bottom:12px">About the Firm</h2>
+      <div class="card">
         <p class="muted" style="margin:0">
-          Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, is a New York City–based practice with over 30 years of experience in defending cases involving
-          <em>slip and fall accidents, general liability, products liability, insurance matters, premises liability, automobile accidents, construction accidents, and municipal claims</em>.
-          Ms. Jules has worked at reputable Manhattan defense firms and served as in-house counsel for major insurance companies, bringing a well-rounded perspective to complex litigation.
+          Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, brings over 30 years of experience defending
+          <em>slip-and-fall, general liability, products liability, insurance matters, premises liability, automobile, construction, and municipal claims</em>.
+          Ms. Jules has worked at reputable Manhattan defense firms and served as in-house counsel for major insurance companies.
         </p>
-        <p class="muted" style="margin:12px 0 0 0">
-          <strong>Firm approach:</strong> professionalism, integrity, and <em>diligence</em> — result-oriented advocacy with clear communication and direct attorney access from start to finish.
-        </p>
-      </div>
 
-      <div class="resume" style="margin-top:14px">
-        <div class="item">
-          <strong>Admission</strong>
-          <div class="muted">New York State and Federal Bar</div>
-        </div>
-        <div class="item">
-          <strong>Capacity</strong>
-          <div class="muted">Dedicated team with scalable support</div>
-        </div>
-        <div class="item">
-          <strong>Location</strong>
-          <div class="muted">New York City</div>
-        </div>
-        <div class="item">
-          <strong>Availability</strong>
-          <div class="muted">Consultations by appointment</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAPABILITIES -->
-    <section id="gov">
-      <h3>Capabilities</h3>
-      <div class="resume" style="grid-template-columns:repeat(3,1fr)">
-        <div class="item">
-          <strong>Core Competencies</strong>
-          <ul class="muted" style="margin:8px 0 0 18px; line-height:1.8">
-            <li>Personal attention by a committed team of professionals</li>
-            <li>Focused advocacy with open, clear communication</li>
-            <li>Strategic guidance aimed at the best achievable outcomes</li>
-            <li>Support, attentiveness, and consideration throughout the case</li>
-            <li>Assertive protection of client rights at each stage</li>
-          </ul>
-        </div>
-        <div class="item">
-          <strong>Why Choose Us</strong>
-          <ul class="muted" style="margin:8px 0 0 18px; line-height:1.8">
-            <li>More than three decades of litigation experience</li>
-            <li>Personalized, results-driven service</li>
-            <li>Trials, tort adjudications, and appellate advocacy</li>
-            <li>Brief-writing, motion practice, research, policy guidance</li>
-            <li>Streamlined operations that keep hourly rates reasonable</li>
-          </ul>
-        </div>
-        <div class="item">
-          <strong>Readiness</strong>
-          <ul class="muted" style="margin:8px 0 0 18px; line-height:1.8">
-            <li>Committed support staff serving all five NYC boroughs, Nassau, Suffolk, and Westchester Counties</li>
-            <li>Dedicated team of paralegals and legal assistants</li>
-            <li>Free consultation — in person, by phone, or via Zoom</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h3>Contact</h3>
-      <div class="contact-wrap">
-        <div class="card"><div class="inner">
-          <p class="muted">For consultations or engagements, please send a message below.</p>
-          <div class="office-address">
-            Jules Firm, LLC<br/>
-            700 Columbus Avenue, Front<br/>
-            #20181<br/>
-            New York, NY 10025
+        <details style="margin-top:12px">
+          <summary class="muted" style="display:flex; align-items:center; gap:8px">
+            <span class="chev">▶</span> Read more about our philosophy
+          </summary>
+          <div style="margin-top:10px">
+            <p>
+              We provide premier defense representation with personalized, robust strategies designed to protect legal rights and secure clients’ best interests.
+              Our team approaches every case with diligence, exploring every facet to achieve the most favorable resolution possible.
+            </p>
+            <p>
+              Our varied background equips us to anticipate challenges and construct effective defense arguments aligned with prevailing legal precedents.
+              Accessibility and timely support are core to our practice.
+            </p>
+            <p>
+              When your matter deserves astute, strategic, and tenacious defense, we’re ready to help.
+            </p>
           </div>
-          <p class="muted" style="font-size:.9rem; margin-top:18px">
-            <strong>Note:</strong> Do not send confidential details through this form. Submitting a message does not create an attorney-client relationship.
-          </p>
-        </div></div>
+        </details>
+      </div>
+    </section>
 
-        <!-- Formspree form -->
-        <form class="card" method="POST" action="https://formspree.io/f/mrbynwre">
-          <div class="inner">
+    <!-- APPROACH + VALUES: bullets, not paragraphs -->
+    <section>
+      <div class="grid-2">
+        <div class="card">
+          <h2 style="font-size:1.25rem">Our Approach</h2>
+          <ul class="clean">
+            <li>Hands-on representation by experienced attorneys</li>
+            <li>Clear communication and direct attorney access</li>
+            <li>Strategic guidance aimed at the best achievable outcomes</li>
+            <li>Meticulous preparation at each stage of litigation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2 style="font-size:1.25rem">Core Values</h2>
+          <ul class="clean">
+            <li>Professionalism, integrity, and diligence</li>
+            <li>Assertive protection of client rights</li>
+            <li>Thoughtful evaluation of challenges and risks</li>
+            <li>Efficient, results-driven service</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT + OFFICE -->
+    <section id="contact">
+      <div class="contact-wrap">
+        <div class="card">
+          <h2 style="font-size:1.25rem; margin-bottom:10px">Contact</h2>
+          <p class="muted">Send a message and we’ll get back to you promptly.</p>
+          <form action="https://formspree.io/f/mrbynwre" method="POST">
             <div class="row">
               <div>
                 <label for="name">Full name</label>
-                <input id="name" name="name" autocomplete="name" required />
+                <input id="name" name="name" type="text" autocomplete="name" required />
               </div>
               <div>
                 <label for="email">Your email</label>
-                <input id="email" type="email" name="email" autocomplete="email" required />
+                <input id="email" name="email" type="email" autocomplete="email" required />
               </div>
             </div>
-
-            <div style="margin-top:12px">
-              <label for="message">How can we help?</label>
+            <div>
+              <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
 
-            <!-- Optional: set subject line and thank-you redirect -->
+            <!-- Optional metadata -->
             <input type="hidden" name="_subject" value="New inquiry from julesfirm.com" />
             <input type="hidden" name="_next" value="https://julesfirm.com/#thanks" />
-
-            <!-- Simple honeypot -->
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-            <div style="margin-top:14px; display:flex; gap:10px">
+            <div style="margin-top:12px">
               <button class="btn" type="submit">Send message</button>
             </div>
+            <p class="muted" style="margin-top:8px; font-size:.9rem">
+              Do not send confidential details. Submitting this form does not create an attorney-client relationship.
+            </p>
+          </form>
 
-            <p class="muted" style="margin-top:10px; font-size:.88rem">We will reply to your message as soon as possible.</p>
+          <!-- Shown after redirect to #thanks -->
+          <div id="thanks" class="tile" style="display:none; margin-top:14px">
+            <p class="muted" style="margin:0">Thank you — your message has been sent.</p>
           </div>
-        </form>
-      </div>
+        </div>
 
-      <!-- Thank-you message; revealed when URL ends with #thanks -->
-      <div id="thanks" class="tile" style="margin-top:16px; display:none;">
-        <p class="muted" style="margin:0">Thank you — your message has been sent.</p>
+        <div class="card">
+          <h2 style="font-size:1.25rem; margin-bottom:10px">Office</h2>
+          <div class="office">
+            Jules Firm, LLC<br/>
+            700 Columbus Avenue<br/>
+            Front #20181<br/>
+            New York, NY 10025
+          </div>
+          <p class="muted" style="margin-top:12px">
+            Service area: All five NYC boroughs, plus Nassau, Suffolk, and Westchester Counties.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -339,15 +265,13 @@
   </footer>
 
   <script>
-    // Year in footer
+    // footer year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // If redirected to /#thanks, unhide the thank-you box
+    // reveal thank-you box on redirect
     if (location.hash === '#thanks') {
-      var t = document.getElementById('thanks');
-      if (t) t.style.display = 'block';
-      // optional: scroll it into view on mobile
-      setTimeout(function(){ t && t.scrollIntoView({behavior:'smooth'}); }, 50);
+      const t = document.getElementById('thanks');
+      if (t) { t.style.display = 'block'; setTimeout(()=>t.scrollIntoView({behavior:'smooth'}), 50); }
     }
   </script>
 </body>
