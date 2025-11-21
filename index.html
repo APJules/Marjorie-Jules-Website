@@ -4,71 +4,297 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jules Firm, LLC | New York City Defense Counsel</title>
-  <meta name="description" content="Jules Firm, LLC provides strategic, results-driven defense counsel in New York City. Tort and insurance defense, premises, products, labor law, appeals." />
+  <meta name="description" content="Jules Firm, LLC provides strategic, results-driven defense counsel in New York City. Tort and insurance defense, premises liability, products liability, labor law, and appeals.">
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#0b1220;            /* solid dark navy */
-      --panel:rgba(15,23,42,.86);
-      --text:#eef4ff;          /* near white */
-      --muted:#9fb3c8;         /* soft blue-gray */
-      --accent:#38bdf8;        /* cyan sky */
-      --accent-2:#22d3ee;
-      --border:rgba(148,163,184,.18);
-      --ring:rgba(56,189,248,.35);
+      --bg-page:#f3f4f6;
+      --bg-card:#ffffff;
+      --nav-bg:#0b1120;
+      --footer-bg:#0b1120;
+
+      --ink:#0b1120;
+      --text:#111827;
+      --muted:#4b5563;
+
+      --accent-blue:#1d4ed8;
+      --accent-gold:#eab308;
+
+      --border:#e5e7eb;
+      --shadow:0 12px 30px rgba(15,23,42,.12);
+      --radius-card:16px;
     }
+
     *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{margin:0;padding:0}
     body{
-      margin:0;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-      background:var(--bg); color:var(--text);
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      font-family:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:var(--bg-page);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
-    a,a:visited{color:var(--accent); text-decoration:none}
-    a:hover{color:var(--accent-2)}
-    .container{max-width:1100px; margin:0 auto; padding:0 20px}
-    header{position:sticky; top:0; z-index:40; background:rgba(7,12,24,.9); border-bottom:1px solid var(--border); backdrop-filter:saturate(140%) blur(6px)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
-    .brand{font-weight:700; letter-spacing:.3px}
-    .btn{border:1px solid var(--border); background:#081021; color:var(--text); padding:10px 14px; border-radius:12px; font-weight:600}
-    .btn:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
 
-    main.container{padding:28px 20px}
-    section{padding:44px 0}
-    h1,h2,h3,h4{margin:0 0 10px}
+    a{color:var(--accent-blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .skip-link{
+      position:absolute;left:-9999px;top:auto;
+      width:1px;height:1px;overflow:hidden;
+    }
+    .skip-link:focus{
+      position:static;width:auto;height:auto;
+      padding:8px 12px;
+      background:#ffffff;
+      border:2px solid var(--accent-blue);
+      z-index:1000;
+    }
+
+    /* Layout */
+    .container{
+      max-width:1120px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header{
+      background:var(--nav-bg);
+      color:#f9fafb;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      font-family:"Playfair Display",serif;
+      font-size:1.2rem;
+      letter-spacing:.04em;
+    }
+    .nav-links{
+      display:flex;
+      gap:18px;
+      font-size:.95rem;
+    }
+    .nav-links a{
+      color:#e5e7eb;
+    }
+    .nav-links a:focus-visible{
+      outline:2px solid #facc15;
+      outline-offset:3px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid #facc15;
+      background:var(--accent-gold);
+      color:#111827;
+      font-weight:600;
+      font-size:.95rem;
+      cursor:pointer;
+      text-decoration:none;
+    }
+    .btn:hover{
+      background:#fbbf24;
+    }
+    .btn:focus-visible{
+      outline:2px solid #fef3c7;
+      outline-offset:2px;
+    }
+
+    main.container{
+      padding:32px 20px 40px;
+    }
+    section{
+      padding:40px 0;
+    }
+    h1,h2,h3,h4{
+      margin:0 0 8px;
+      color:var(--ink);
+      font-family:"Playfair Display",serif;
+    }
+    h1{font-size:2.2rem;line-height:1.2}
+    h2{font-size:1.5rem;margin-bottom:12px}
+    h3{font-size:1.15rem}
+    p{margin:0 0 10px}
     .muted{color:var(--muted)}
-    .card{background:linear-gradient(180deg,var(--panel),rgba(2,6,23,.9)); border:1px solid var(--border); border-radius:16px; padding:20px}
-    .grid-3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
-    .grid-2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px}
-    .pill{display:inline-block; padding:8px 12px; border:1px solid var(--border); border-radius:999px; color:#dbe7f6; font-size:.95rem}
-    ul.clean{margin:10px 0 0 18px; line-height:1.75}
-    .tile{border:1px solid var(--border); border-radius:14px; padding:16px; background:linear-gradient(180deg,rgba(10,16,30,.9),rgba(6,10,20,.9))}
 
-    /* Contact form */
-    .contact-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:18px}
-    label{display:block; font-size:.92rem; color:#d1e5f7; margin:6px 0}
-    input,textarea{width:100%; background:#081021; border:1px solid var(--border); color:var(--text); padding:12px 14px; border-radius:12px}
-    textarea{min-height:130px; resize:vertical}
-    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .tagline{
+      font-size:.95rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--accent-blue);
+      font-weight:600;
+    }
 
-    .office{font-size:1.1rem; line-height:1.8; font-weight:700; background:rgba(56,189,248,.10);
-      padding:16px 18px; border-radius:12px; border:1px solid rgba(56,189,248,.35)}
+    .hero{
+      display:grid;
+      grid-template-columns: minmax(0,1.5fr) minmax(0,1.1fr);
+      gap:28px;
+      align-items:stretch;
+    }
+    .card{
+      background:var(--bg-card);
+      border-radius:var(--radius-card);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      padding:22px 22px 24px;
+    }
 
-    /* Read more discloser */
-    details summary{cursor:pointer; list-style:none}
+    .hero-stats{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .stat-pill{
+      border-radius:999px;
+      border:1px solid var(--border);
+      padding:7px 12px;
+      font-size:.9rem;
+      color:var(--muted);
+      background:#f9fafb;
+    }
+    .hero-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+
+    .section-header{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:16px;
+    }
+    .section-header p{
+      margin:0;
+      font-size:.95rem;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .tile{
+      background:var(--bg-card);
+      border-radius:14px;
+      border:1px solid var(--border);
+      padding:18px 18px 16px;
+    }
+
+    ul.clean{
+      margin:4px 0 0 18px;
+      padding:0;
+      line-height:1.7;
+    }
+    ul.clean li{margin-bottom:4px}
+
+    details{
+      margin-top:8px;
+    }
+    details summary{
+      list-style:none;
+      cursor:pointer;
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      font-size:.95rem;
+      color:var(--accent-blue);
+    }
     details summary::-webkit-details-marker{display:none}
-    summary .chev{transition:transform .15s ease}
-    details[open] summary .chev{transform:rotate(90deg)}
+    .chevron{
+      font-size:.8rem;
+      transition:transform .15s ease;
+    }
+    details[open] .chevron{
+      transform:rotate(90deg);
+    }
 
-    footer{padding:26px 0; color:#b9cbe0; border-top:1px solid var(--border)}
+    .contact-layout{
+      display:grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap:22px;
+      align-items:flex-start;
+    }
+    label{
+      display:block;
+      font-size:.9rem;
+      margin-bottom:4px;
+      color:var(--ink);
+    }
+    input,textarea{
+      width:100%;
+      font:inherit;
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:10px 12px;
+      background:#f9fafb;
+      color:var(--text);
+    }
+    input:focus-visible, textarea:focus-visible{
+      outline:2px solid var(--accent-blue);
+      outline-offset:2px;
+      border-color:var(--accent-blue);
+    }
+    textarea{min-height:130px;resize:vertical}
 
-    @media (max-width:920px){
-      .grid-3,.grid-2,.contact-wrap,.row{grid-template-columns:1fr}
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .office-block{
+      padding:18px 18px 16px;
+      background:var(--bg-card);
+      border-radius:14px;
+      border:1px solid var(--border);
+    }
+
+    footer{
+      background:var(--footer-bg);
+      color:#e5e7eb;
+      padding:18px 0;
+      font-size:.9rem;
+    }
+    footer .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .contact-layout{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      main.container{padding-top:20px}
     }
   </style>
 
@@ -93,86 +319,123 @@
   </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <header>
-    <div class="container nav">
+    <div class="container nav" aria-label="Main navigation">
       <div class="brand">Jules Firm, LLC</div>
-      <a class="btn" href="#contact">Contact</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#practice-areas">Practice Areas</a>
+        <a href="#about">About</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="btn">Request Consultation</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main id="main" class="container">
 
-    <!-- HERO: crisp + short -->
-    <section style="padding-top:36px">
-      <div class="card">
-        <span class="pill">Defense Litigation • New York City</span>
-        <h1 style="font-size:2rem; margin-top:10px">Defense Counsel for Complex Litigation</h1>
-        <p class="muted" style="margin-top:6px">
-          Strategic, results-driven representation in tort and insurance defense, including premises, products, labor law, and appeals.
-        </p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
-          <span class="pill">New York State and Federal Bar</span>
-          <span class="pill">30+ years’ experience</span>
-          <span class="pill">Based in New York City</span>
+    <!-- HERO -->
+    <section aria-labelledby="hero-heading" style="padding-top:32px">
+      <div class="hero">
+        <div class="card">
+          <p class="tagline">Defense Litigation • New York City</p>
+          <h1 id="hero-heading">Defense Counsel for Complex Litigation</h1>
+          <p class="muted">
+            Strategic, results-driven representation in tort and insurance defense, including premises,
+            products, labor law, and appeals.
+          </p>
+
+          <div class="hero-stats" aria-label="Key facts">
+            <div class="stat-pill">New York State and Federal Bar</div>
+            <div class="stat-pill">30+ years’ experience</div>
+            <div class="stat-pill">Based in New York City</div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn">Request a consultation</a>
+          </div>
         </div>
+
+        <!-- At a Glance (no photo / no placeholders) -->
+        <aside class="card" aria-label="Firm overview">
+          <h2 style="font-size:1.1rem;margin-bottom:6px">At a Glance</h2>
+          <p class="muted" style="font-size:.95rem;margin-bottom:10px">
+            Jules Firm, LLC is a New York City–based defense practice led by <strong>Marjorie Jules, Esq.</strong>,
+            focused on complex liability and insurance matters.
+          </p>
+          <ul class="clean" style="margin-top:4px">
+            <li>Defense of slip-and-fall, general liability, products liability, and premises claims</li>
+            <li>Experience with automobile, construction, and municipal matters</li>
+            <li>Representation across all five NYC boroughs and nearby counties</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <!-- PRACTICE AREAS: up front, scannable -->
-    <section>
-      <h2 style="font-size:1.35rem; margin-bottom:12px">Practice Areas</h2>
+    <!-- PRACTICE AREAS -->
+    <section id="practice-areas" aria-labelledby="practice-heading">
+      <div class="section-header">
+        <h2 id="practice-heading">Practice Areas</h2>
+        <p class="muted">Focused defense counsel for complex liability and insurance matters.</p>
+      </div>
       <div class="grid-3">
         <div class="tile">
-          <h3 style="font-size:1.1rem">Tort & Insurance Defense</h3>
-          <p class="muted">Vehicular and premises liability, complex tort claims, defense strategy and trial prep.</p>
+          <h3>Tort &amp; Insurance Defense</h3>
+          <p class="muted">
+            Vehicular and premises liability, complex tort claims, defense strategy and trial preparation.
+          </p>
         </div>
         <div class="tile">
-          <h3 style="font-size:1.1rem">Products & Labor Law</h3>
-          <p class="muted">Labor Law §240/241 and products liability defense in complex settings.</p>
+          <h3>Products &amp; Labor Law</h3>
+          <p class="muted">
+            Labor Law §240/241 and products liability defense in complex settings.
+          </p>
         </div>
         <div class="tile">
-          <h3 style="font-size:1.1rem">Appeals & Motion Practice</h3>
-          <p class="muted">Persuasive briefing and oral argument in administrative and civil appeals.</p>
+          <h3>Appeals &amp; Motion Practice</h3>
+          <p class="muted">
+            Persuasive briefing and oral argument in administrative and civil appeals.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT: concise + expandable philosophy -->
-    <section>
-      <h2 style="font-size:1.35rem; margin-bottom:12px">About the Firm</h2>
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About the Firm</h2>
       <div class="card">
-        <p class="muted" style="margin:0">
+        <p class="muted">
           Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, brings over 30 years of experience defending
-          <em>slip-and-fall, general liability, products liability, insurance matters, premises liability, automobile, construction, and municipal claims</em>.
-          Ms. Jules has worked at reputable Manhattan defense firms and served as in-house counsel for major insurance companies.
+          slip-and-fall, general liability, products liability, insurance matters, premises liability,
+          automobile, construction, and municipal claims. Ms. Jules has worked at reputable Manhattan
+          defense firms and served as in-house counsel for major insurance companies.
         </p>
 
-        <details style="margin-top:12px">
-          <summary class="muted" style="display:flex; align-items:center; gap:8px">
-            <span class="chev">▶</span> Read more about our philosophy
-          </summary>
-          <div style="margin-top:10px">
+        <details>
+          <summary><span class="chevron">▶</span><span>Read more about our philosophy</span></summary>
+          <div style="margin-top:8px">
             <p>
-              We provide premier defense representation with personalized, robust strategies designed to protect legal rights and secure clients’ best interests.
-              Our team approaches every case with diligence, exploring every facet to achieve the most favorable resolution possible.
+              The firm is dedicated to providing premier defense representation with personalized, robust strategies
+              designed to protect legal rights and secure clients’ best interests. Every matter receives focused attention,
+              thoughtful evaluation, and a clear plan tailored to the client’s objectives.
             </p>
             <p>
-              Our varied background equips us to anticipate challenges and construct effective defense arguments aligned with prevailing legal precedents.
-              Accessibility and timely support are core to our practice.
-            </p>
-            <p>
-              When your matter deserves astute, strategic, and tenacious defense, we’re ready to help.
+              Our varied background equips us to anticipate challenges and construct effective defense arguments
+              aligned with prevailing legal precedents. Accessibility and timely support are core to our practice.
+              When your matter deserves astute, strategic, and tenacious defense, the firm is ready to help.
             </p>
           </div>
         </details>
       </div>
     </section>
 
-    <!-- APPROACH + VALUES: bullets, not paragraphs -->
-    <section>
+    <!-- APPROACH & VALUES -->
+    <section id="approach" aria-labelledby="approach-heading">
       <div class="grid-2">
         <div class="card">
-          <h2 style="font-size:1.25rem">Our Approach</h2>
+          <h2 id="approach-heading" style="font-size:1.3rem">Our Approach</h2>
           <ul class="clean">
             <li>Hands-on representation by experienced attorneys</li>
             <li>Clear communication and direct attorney access</li>
@@ -181,7 +444,7 @@
           </ul>
         </div>
         <div class="card">
-          <h2 style="font-size:1.25rem">Core Values</h2>
+          <h2 style="font-size:1.3rem">Core Values</h2>
           <ul class="clean">
             <li>Professionalism, integrity, and diligence</li>
             <li>Assertive protection of client rights</li>
@@ -192,14 +455,14 @@
       </div>
     </section>
 
-    <!-- CONTACT + OFFICE -->
-    <section id="contact">
-      <div class="contact-wrap">
+    <!-- CONTACT & OFFICE -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="contact-layout">
         <div class="card">
-          <h2 style="font-size:1.25rem; margin-bottom:10px">Contact</h2>
-          <p class="muted">Send a message and we’ll get back to you promptly.</p>
+          <h2 id="contact-heading">Contact</h2>
+          <p class="muted">Send a message and we’ll respond as promptly as possible.</p>
           <form action="https://formspree.io/f/mrbynwre" method="POST">
-            <div class="row">
+            <div class="form-row">
               <div>
                 <label for="name">Full name</label>
                 <input id="name" name="name" type="text" autocomplete="name" required />
@@ -209,69 +472,74 @@
                 <input id="email" name="email" type="email" autocomplete="email" required />
               </div>
             </div>
-            <div>
+
+            <div style="margin-top:10px">
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
 
-            <!-- Optional metadata -->
+            <!-- Formspree metadata -->
             <input type="hidden" name="_subject" value="New inquiry from julesfirm.com" />
             <input type="hidden" name="_next" value="https://julesfirm.com/#thanks" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-            <div style="margin-top:12px">
-              <button class="btn" type="submit">Send message</button>
+            <div style="margin-top:14px">
+              <button type="submit" class="btn">Send message</button>
             </div>
-            <p class="muted" style="margin-top:8px; font-size:.9rem">
-              Do not send confidential details. Submitting this form does not create an attorney-client relationship.
+
+            <p class="muted" style="margin-top:8px;font-size:.9rem">
+              Do not send confidential details through this form. Submitting a message does not create an attorney-client relationship.
             </p>
           </form>
 
-          <!-- Shown after redirect to #thanks -->
-          <div id="thanks" class="tile" style="display:none; margin-top:14px">
+          <div id="thanks" class="tile" style="display:none;margin-top:14px">
             <p class="muted" style="margin:0">Thank you — your message has been sent.</p>
           </div>
         </div>
 
-        <div class="card">
-          <h2 style="font-size:1.25rem; margin-bottom:10px">Office</h2>
-          <div class="office">
-            Jules Firm, LLC<br/>
+        <aside class="office-block" aria-label="Office information">
+          <h2 style="font-size:1.2rem;margin-bottom:8px">Office</h2>
+          <p>
+            <strong>Jules Firm, LLC</strong><br/>
             700 Columbus Avenue<br/>
             Front #20181<br/>
             New York, NY 10025
-          </div>
-          <p class="muted" style="margin-top:12px">
+          </p>
+          <p class="muted" style="margin-top:6px">
             Service area: All five NYC boroughs, plus Nassau, Suffolk, and Westchester Counties.
           </p>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <section>
+    <section aria-label="Legal notice">
       <div class="tile">
-        <p class="muted" style="margin:0; font-size:.9rem">
-          Attorney Advertising. Prior results do not guarantee a similar outcome. This site provides general information and does not create an attorney-client relationship.
+        <p class="muted" style="margin:0;font-size:.9rem">
+          Attorney Advertising. Prior results do not guarantee a similar outcome. This site provides general information
+          and does not create an attorney-client relationship.
         </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+    <div class="container footer-inner">
       <div>© <span id="yr"></span> Jules Firm, LLC</div>
       <div>New York City</div>
     </div>
   </footer>
 
   <script>
-    // footer year
+    // Year in footer
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // reveal thank-you box on redirect
+    // Show thank-you message after Formspree redirect
     if (location.hash === '#thanks') {
-      const t = document.getElementById('thanks');
-      if (t) { t.style.display = 'block'; setTimeout(()=>t.scrollIntoView({behavior:'smooth'}), 50); }
+      const thanks = document.getElementById('thanks');
+      if (thanks) {
+        thanks.style.display = 'block';
+        setTimeout(() => { thanks.scrollIntoView({behavior:'smooth'}); }, 80);
+      }
     }
   </script>
 </body>
