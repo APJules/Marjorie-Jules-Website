@@ -367,6 +367,50 @@
     margin-top: 10px;
   }
 }
+    /* --- MOBILE HEADER CLEANUP --- */
+@media (max-width: 768px) {
+  header .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0 8px;
+  }
+
+  .brand {
+    white-space: nowrap;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.88rem;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+  }
+    }
+    /* --- MOBILE PRACTICE AREAS HEADER --- */
+@media (max-width: 768px) {
+  #practice .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  #practice .section-header h2 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+  }
+
+  #practice .section-header .section-kicker {
+    max-width: 100%;
+    font-size: 0.94rem;
+  }
+}
   </style>
 
   <!-- Structured Data -->
