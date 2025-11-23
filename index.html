@@ -171,3 +171,523 @@
     .hero-lede {
       font-size:1.02rem;
       line-height:1.7;
+      color:#d1d5db;
+      margin-bottom:18px;
+    }
+
+    .hero-tags {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:22px;
+    }
+
+    .hero-tag {
+      padding:8px 13px;
+      border-radius:999px;
+      border:1px solid rgba(249,250,251,.16);
+      font-size:.86rem;
+      color:#e5e7eb;
+      background:rgba(15,23,42,.6);
+    }
+
+    .btn-primary {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 22px;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      font-size:.95rem;
+      background:var(--accent);
+      color:var(--navy);
+      box-shadow:0 14px 30px rgba(0,0,0,.4);
+    }
+
+    .btn-primary:hover {
+      background:var(--accent-dark);
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .hero-logo-card {
+      background:#0b1726;
+      border-radius:26px;
+      padding:26px 24px 24px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(148,163,184,.35);
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .hero-logo-icon {
+      background:#020617;
+      border-radius:20px;
+      padding:14px 18px;
+      border:1px solid rgba(249,250,251,.09);
+    }
+
+    .hero-logo-icon img {
+      height:60px;
+      width:auto;
+      display:block;
+    }
+
+    .hero-logo-card h2 {
+      font-size:1.1rem;
+      color:#e5e7eb;
+    }
+
+    .hero-logo-card p {
+      margin:0;
+      font-size:.92rem;
+      color:#cbd5f5;
+      line-height:1.7;
+    }
+
+    /* Sections */
+    main section {
+      padding:52px 0 0;
+    }
+
+    .section-title {
+      font-size:1.55rem;
+      margin-bottom:10px;
+    }
+
+    .section-kicker {
+      font-size:.78rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:6px;
+    }
+
+    .section-subtitle {
+      color:var(--muted);
+      margin-bottom:22px;
+      max-width:640px;
+      font-size:.96rem;
+    }
+
+    .card-grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card {
+      background:var(--panel);
+      border-radius:18px;
+      border:1px solid var(--border);
+      padding:18px 18px 20px;
+      box-shadow:0 10px 26px rgba(148,134,110,.12);
+    }
+
+    .card h3 {
+      font-size:1.1rem;
+      margin-bottom:6px;
+    }
+
+    .card p {
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.7;
+    }
+
+    /* At a Glance & About */
+    .two-col {
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    .bullet-list {
+      margin:0;
+      padding-left:1.1rem;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.8;
+    }
+
+    .bullet-list li + li {
+      margin-top:4px;
+    }
+
+    /* Long philosophy tile */
+    .tile-wide {
+      background:var(--panel-soft);
+      border-radius:18px;
+      border:1px solid var(--border);
+      padding:20px 20px 22px;
+      margin-top:18px;
+      box-shadow:0 10px 22px rgba(0,0,0,.06);
+    }
+
+    .tile-wide p {
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.8;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+      gap:22px;
+      align-items:start;
+    }
+
+    label {
+      display:block;
+      font-size:.86rem;
+      margin-bottom:5px;
+      color:var(--muted);
+    }
+
+    input, textarea {
+      width:100%;
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      font-family:inherit;
+      font-size:.94rem;
+      background:#fdfaf7;
+      color:var(--text);
+    }
+
+    textarea {
+      min-height:140px;
+      resize:vertical;
+    }
+
+    form .row {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .office-card {
+      background:var(--panel);
+      border-radius:18px;
+      border:1px solid var(--border);
+      padding:18px 18px 20px;
+      box-shadow:0 10px 26px rgba(148,134,110,.12);
+      font-size:.96rem;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .office-card strong {
+      color:var(--text);
+    }
+
+    footer {
+      border-top:1px solid var(--border);
+      padding:26px 0 30px;
+      font-size:.84rem;
+      color:var(--muted);
+      background:#f3ede3;
+      margin-top:46px;
+    }
+
+    .footer-inner {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns:1fr;
+        padding-bottom:6px;
+      }
+      .hero h1 {
+        font-size:1.9rem;
+      }
+      .hero-logo-card {
+        order:-1;
+      }
+      .card-grid-3,
+      .two-col,
+      .contact-grid,
+      form .row {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .brand-text-main {
+        font-size:.95rem;
+      }
+      .hero-wrap {
+        padding-top:38px;
+      }
+      .hero {
+        padding:0 16px;
+      }
+      .shell {
+        padding:0 16px 42px;
+      }
+      .section-title {
+        font-size:1.4rem;
+      }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "The Jules Firm, LLC",
+    "founder": "Marjorie Jules",
+    "areaServed": "New York City",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "700 Columbus Avenue, Front #20181",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "10025",
+      "addressCountry": "US"
+    },
+    "url": "https://julesfirm.com"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-logo-wrap">
+          <img src="https://i.postimg.cc/L4QsXkmQ/file-0000000095f071fdabfb25cc1252e009.png" alt="The Jules Firm logo">
+        </div>
+        <div class="brand-text-main">The Jules Firm, LLC</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#practice">Practice Areas</a>
+        <a href="#about">About</a>
+        <a href="#approach">Approach</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="#contact">Request Consultation</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero-wrap">
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Justice with Compassion • Strength with Purpose</div>
+        <h1>Defense Counsel for Complex Litigation</h1>
+        <p class="hero-lede">
+          Strategic, results-driven representation in tort and insurance defense, including premises, products, labor law, automobile, construction, municipal matters, and appeals.
+        </p>
+        <div class="hero-tags">
+          <div class="hero-tag">New York State and Federal Bar</div>
+          <div class="hero-tag">30+ years’ experience</div>
+          <div class="hero-tag">Based in New York City</div>
+        </div>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Request a consultation</a>
+        </div>
+      </div>
+
+      <aside class="hero-logo-card" aria-label="Firm overview">
+        <div class="hero-logo-icon">
+          <img src="https://i.postimg.cc/L4QsXkmQ/file-0000000095f071fdabfb25cc1252e009.png" alt="The Jules Firm emblem">
+        </div>
+        <h2>The Jules Firm, LLC</h2>
+        <p>
+          A New York City–based defense practice led by <strong>Marjorie Jules, Esq.</strong>, focused on complex liability and insurance matters. The firm provides meticulous case assessment, clear communication, and steady advocacy from intake through resolution.
+        </p>
+      </aside>
+    </section>
+  </div>
+
+  <main class="shell">
+
+    <!-- AT A GLANCE -->
+    <section aria-labelledby="at-a-glance">
+      <div class="section-kicker">Defense Litigation • New York</div>
+      <h2 id="at-a-glance" class="section-title">At a Glance</h2>
+      <div class="two-col">
+        <div class="card">
+          <p style="margin:0; color:var(--muted); line-height:1.8; font-size:.96rem;">
+            The Jules Firm, LLC is a New York City–based defense practice led by
+            <strong>Marjorie Jules, Esq.</strong>, focused on complex liability and insurance matters.
+          </p>
+          <ul class="bullet-list" style="margin-top:10px;">
+            <li>Defense of slip-and-fall, general liability, products liability, and premises claims</li>
+            <li>Experience with automobile, construction, and municipal matters</li>
+            <li>Representation across all five NYC boroughs and nearby counties</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom:10px;">Experience & Focus</h3>
+          <p style="margin-bottom:8px;">
+            Ms. Jules brings over 30 years of experience defending:
+          </p>
+          <ul class="bullet-list">
+            <li>Slip and fall accidents and general liability claims</li>
+            <li>Products liability and insurance coverage disputes</li>
+            <li>Premises liability, automobile, construction, and municipal claims</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE AREAS -->
+    <section id="practice" aria-labelledby="practice-title">
+      <div class="section-kicker">Practice Areas</div>
+      <h2 id="practice-title" class="section-title">How the Firm Helps</h2>
+      <p class="section-subtitle">
+        Focused defense counsel for complex liability and insurance matters, tailored to the facts and needs of each case.
+      </p>
+
+      <div class="card-grid-3">
+        <article class="card">
+          <h3>Tort &amp; Insurance Defense</h3>
+          <p>Vehicular and premises liability, complex tort claims, defense strategy, and trial preparation.</p>
+        </article>
+        <article class="card">
+          <h3>Products &amp; Labor Law</h3>
+          <p>Labor Law §240/241 and products liability defense in complex settings.</p>
+        </article>
+        <article class="card">
+          <h3>Appeals &amp; Motion Practice</h3>
+          <p>Persuasive briefing and oral argument in administrative and civil appeals.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="section-kicker">About the Firm</div>
+      <h2 id="about-title" class="section-title">The Jules Firm, LLC</h2>
+
+      <div class="card">
+        <p style="margin:0 0 10px; color:var(--muted); line-height:1.8; font-size:.96rem;">
+          The Jules Firm, LLC, led by <strong>Marjorie Jules, Esq.</strong>, is a New York City–based practice with
+          over 30 years of experience in defending cases involving slip-and-fall accidents, general liability,
+          products liability, insurance matters, premises liability, automobile accidents, construction accidents,
+          and municipal claims. Ms. Jules has worked at reputable Manhattan defense firms and served as in-house
+          counsel for major insurance companies, bringing a well-rounded perspective to complex litigation.
+        </p>
+        <p style="margin:0; color:var(--muted); line-height:1.8; font-size:.96rem;">
+          The firm’s approach centers on professionalism, integrity, and <em>diligence</em> — result-oriented advocacy
+          with clear communication and direct attorney access from start to finish.
+        </p>
+      </div>
+
+      <div class="tile-wide" aria-label="Firm philosophy">
+        <p>
+          At The Jules Firm, LLC, we are dedicated to providing premier defense representation across New York City.
+          Our fundamental commitment lies in offering each client not just legal counsel, but a personalized and robust
+          defense strategy designed to meticulously protect their legal rights and secure their best interests. We firmly
+          believe in a client-centric approach, ensuring that every individual receives the highest caliber of attention
+          and tailored solutions, regardless of the complexity of their situation.
+        </p>
+        <p>
+          Our seasoned team approaches every case with unwavering dedication, diligently exploring every facet and legal
+          avenue to achieve the most favorable resolution possible. We are relentless in our advocacy, leaving no stone
+          unturned as we champion our clients’ causes throughout the entire legal process.
+        </p>
+        <p>
+          The firm’s varied experience of our legal professionals provides a profound understanding of litigation tactics
+          and strategies, allowing us to anticipate challenges and construct highly effective defense arguments tailored
+          to prevailing legal precedents.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPROACH & VALUES -->
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="section-kicker">How the Firm Works</div>
+      <h2 id="approach-title" class="section-title">Approach & Core Values</h2>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>Our Approach</h3>
+          <ul class="bullet-list">
+            <li>Hands-on representation by experienced attorneys</li>
+            <li>Clear communication and direct attorney access</li>
+            <li>Strategic guidance aimed at the best achievable outcomes</li>
+            <li>Meticulous preparation at each stage of litigation</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Core Values</h3>
+          <ul class="bullet-list">
+            <li>Professionalism, integrity, and diligence</li>
+            <li>Assertive protection of client rights</li>
+            <li>Thoughtful evaluation of challenges and risks</li>
+            <li>Efficient, results-driven service</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="section-kicker">Contact</div>
+      <h2 id="contact-title" class="section-title">Request a Consultation</h2>
+      <p class="section-subtitle">
+        Send a message using the form below. A response will be provided as promptly as possible.
+        Please do not include confidential information.
+      </p>
+
+      <div class="contact-grid">
+        <!-- Formspree form -->
+        <form method="POST" action="https://formspree.io/f/mrbynwre">
+          <div class="card" style="padding:20px 18px 22px;">
+            <div class="row">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="email">Your email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div style="margin-top:12px;">
+              <label for="message">How can the firm assist you?</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <!-- Formspree helpers -->
+            <input type="hidden" name="_subject" value="New inquiry from julesfirm.com">
+            <input type="hidden" name="_next" value="https://julesfirm.com/#contact">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div style="margin-top:15px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+              <button class="btn-primary" type="submit">Send message</button>
+              <span style="font-size:.86rem; color:var(--muted);">
+                Submitting a message does not create an attorney-client relationship.
+              </span>
+            </div>
+          </div>
+        </form>
+
+        <div class="office-card">
+          <strong>The Jules Firm, LLC</strong><br>
